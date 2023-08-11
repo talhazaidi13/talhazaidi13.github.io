@@ -11,28 +11,42 @@
 </head>
 
 <body>
-  <!-- <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div> -->
 
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <nav class="sticky" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <ul class="main-nav">
+      <li><a id = "active" href="#">Introduction</a></li>
+      <li><a href="#Work">Work Experience</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li class="dropdown">
+        <a href="#TechBlogs">Tech Blogs</a>
+        <ul class="dropdown-content">
+          <br>
+          <li ><a href="#">Deep Learning</a></li><br>
+          <li ><a href="ml&ds.html">Machine Learning and Data Science</a></li><br>
+          <li ><a href="#">Parallel Programming</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Extracurricular activities</a></li>
+    </ul>
+  </nav>
+
+  <!-- <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
     <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <td style="padding:0px"> -->
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
                 <name>Muhammad Ali Shafique</name>
               </p>
-              <p>I am a PhD student in Electrical and Computer Engineering, <a href="https://ece.k-state.edu/" target="_blank">Kansas State University</a> advised by <a href="https://www.cs.ksu.edu/about/people/faculty/munir/" target="_blank">Arslan Munir</a> and <a href="https://ece.k-state.edu/about/people/faculty/gruenbacher/" target="_blank">Don Gruenbacher</a>. I am member of <a href="https://people.cs.ksu.edu/~amunir/lab/" target="_blank">ISCAAS</a> research Lab and  my research focus is machine learning and edge computing. 
+              <p >I am a PhD student in Electrical and Computer Engineering, <a href="https://ece.k-state.edu/" target="_blank">Kansas State University</a> advised by <a href="https://www.cs.ksu.edu/about/people/faculty/munir/" target="_blank">Arslan Munir</a> and <a href="https://ece.k-state.edu/about/people/faculty/gruenbacher/" target="_blank">Don Gruenbacher</a>. I am member of <a href="https://people.cs.ksu.edu/~amunir/lab/" target="_blank">ISCAAS</a> research Lab and  my research focus is machine learning and edge computing. 
               </p>
-              <p>
+              <p >
                 Previously, I was a faculty member(Lecturer) in the Department of Electrical Engineering, <a href="https://www.uet.edu.pk/" target="_blank">University of Engineering and Technology(UET) Lahore</a>. I completed my MS and BS from the Department of Electrical Engineering, UET Lahore advised by Dr. Khalid Mahmood Ul Hassan.
               </p>
-            <!--  <p style="text-align:center">
+             <!-- <p style="text-align:center">
                 <a href="mailto:alishafique@ksu.edu" target="_blank">Email</a> &nbsp/&nbsp
                 <a href="data/AliShafique_CV.pdf" target="_blank">CV</a> &nbsp/&nbsp
                 <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp
@@ -44,11 +58,13 @@
               </p> -->
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/AliShafique.jpg"><img style="width:80%;max-width:100%" alt="profile photo" src="images/AliShafique_circle.jpg" class="hoverZoomLink"></a>
+              <a href="images/AliShafique.jpg"><img style="width:80%;max-width:100%;float: right;" alt="profile photo" src="images/AliShafique_circle.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+        <!-- <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>News</heading>
@@ -63,7 +79,7 @@
               </ul>
             </td>
           </tr>
-        </tbody></table>
+        </tbody></table> -->
 
 <!--
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -189,8 +205,8 @@
           </tr>   
 
         </tbody></table> --> 
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <br id="Work"><br><br>
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="width:100%;vertical-align:middle">
               <heading>Research</heading>
@@ -200,7 +216,7 @@
               
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
           <td style="width:100%;vertical-align:middle">
             <p>
             My research focus is to:  
@@ -217,7 +233,7 @@
               <li>Optimize state of an art models like transformers for the edge devices.</li>
             </ul>
           </td>
-        </tr>
+        </tr> -->
 <!--
         <tr>
           <td style="width:100%;vertical-align:middle">
@@ -229,16 +245,21 @@
 
         </tr> -->
 
-        <tr>
-          <td style="width:100%;vertical-align:middle">
-            <heading>Projects and Tutorials</heading>
-          </td>
-        </tr>
-
       </tbody></table>
 
+      <br><br><br id="Projects"><br><br>
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="width:100%;vertical-align:middle">
+              <heading >Featured Projects</heading>
+            </td>
+          </tr>
+  
+        </tbody></table>
+
+
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 <!--
           <tr onmouseout="rawnerf_stop()" onmouseover="rawnerf_start()"  bgcolor="#ffffd0">
@@ -338,19 +359,19 @@
           </tr>   
 
         </tbody></table> 
-<br><br><br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
+        <br><br><br id = "TechBlogs"><br><br>
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
 
           <tr>
             <td style="width:100%;vertical-align:middle">
-              <heading>Machine Learning and Data Science Notes</heading>
+              <heading >Technical Notes</heading>
             </td>
           </tr>
   
         </tbody></table>
 
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
           <tr onmouseout="regnerf_stop()" onmouseover="regnerf_start()">
@@ -567,15 +588,15 @@
             <td style="padding:0px">
               <br>
               <p style="text-align:right;font-size:small;">
-                Last Updated: June 2023<br>
+                Last Updated: August 2023<br>
                 Credits for the template to <a href=https://jonbarron.info/>Jon Barron</a>.
               </p>
             </td>
           </tr>
         </tbody></table>
-      </td>
+      <!-- </td>
     </tr>
-  </table>
+  </table> -->
 </body>
 
 </html>
