@@ -198,6 +198,7 @@ a:hover {
   display: flex;
   border: 1px solid #e7e7e7;
   padding: 10px 16px;
+  overflow: auto;
 }
 
 /* .main-nav li {
