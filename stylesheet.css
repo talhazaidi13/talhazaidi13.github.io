@@ -130,7 +130,9 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-
+.nav-link:hover {
+  color: #e48c26 !important;
+}
 
 
 
