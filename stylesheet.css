@@ -70,7 +70,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #e48c26;
   text-decoration: none;
 }
 
@@ -181,12 +181,11 @@ a:hover {
   background-color: #04AA6D;
 } */
 
-.sticky {
+/* .sticky {
   position: sticky;
   top: 0;
   text-align: center;
-  /* background-color: #333; */
-  /* border: 1px solid #ce3636; */
+
   background-color: #fffdfd;
   z-index: 100;
 }
@@ -198,15 +197,13 @@ a:hover {
   display: flex;
   border: 1px solid #e7e7e7;
   padding: 10px 16px;
-  overflow: auto;
+  
 }
 
-/* .main-nav li {
-   margin-right: 20px; 
-} */
+
 
 .main-nav li{
-  /* float: right; */
+
   margin-left: 30px;
 }
 
@@ -216,8 +213,7 @@ a:hover {
   padding: 14px 12px;
   text-decoration: none;
   
-  /* text-decoration: none;
-  color: white; */
+
 }
 
 .main-nav a:hover {
@@ -234,7 +230,7 @@ a:hover {
   position: absolute;
   background-color: #fffdfd;
   list-style: none;
-  /* float: left; */
+
   margin-right: 200px;
   padding: 14px 16px;
 }
@@ -242,7 +238,7 @@ a:hover {
 .dropdown:hover .dropdown-content {
   padding: 14px 16px;
   display: block;
-  /* writing-mode: horizontal-tb; */
+ 
   width: 290px;
   color: #f09228;
   text-decoration: none;
@@ -250,7 +246,7 @@ a:hover {
 
 #active{
   color: #f09228;
-}
+} */
 
 
 
