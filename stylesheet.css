@@ -134,6 +134,12 @@ span.highlight {
   color: #e48c26 !important;
 }
 
+.btn-outline-primary:hover{
+  color: #e48c26 !important;
+  background-color: #ffffff !important;
+  border-color: #e48c26 !important;
+}
+
 
 
 
