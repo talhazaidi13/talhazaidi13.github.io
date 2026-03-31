@@ -416,7 +416,39 @@
 	  display:block;
 	  transform: scale(var(--img-zoom, 1));
 	}
+  
+	@media (max-width: 900px){
+	  #research .paper-card{
+		display:flex;
+		flex-direction:column;
+		gap:14px;
+	  }
+  
+	  #research .paper-thumb,
+	  #research .paper-thumb.dual{
+		flex:none;
+		width:100%;
+		min-width:100%;
+		max-width:100%;
+		height:auto;
+	  }
+  
+	  #research .paper-thumb img,
+	  #research .paper-thumb.dual img{
+		width:100%;
+		height:auto;
+		object-fit:contain;
+		transform:none;
+	  }
+  
+	  #research .paper-body{
+		width:100%;
+		min-width:0;
+		padding:1.1rem 1.2rem 1.3rem;
+	  }
+	}
   </style>
+
   
   <div class="wrap" id="research">
 	  <div class="sec-hdr reveal">
