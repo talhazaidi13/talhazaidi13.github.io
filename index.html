@@ -59,7 +59,7 @@
     .stat-num { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--bright); line-height: 1; }
     .stat-lbl { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; }
     .stat-div { width: 1px; height: 38px; background: var(--border); align-self: center; }
-    .photo-wrap { position: relative; width: 240px; height: 300px; justify-self: center; }
+    .photo-wrap { position: relative; width: 300px; height: 400px; justify-self: center; }
     .photo-wrap::before { content: ''; position: absolute; inset: -10px; border: 1px solid rgba(0,200,255,0.25); border-radius: 10px; transform: rotate(3deg); animation: pspin 8s ease-in-out infinite alternate; }
     @keyframes pspin { from{transform:rotate(2deg)} to{transform:rotate(-2deg)} }
     .photo-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 7px; filter: grayscale(15%) contrast(1.05); display: block; }
@@ -281,7 +281,7 @@
       </div>
     </div>
     <div class="photo-wrap" id="photoWrap">
-      <img src="images/talha1.jpg" alt="Talha Zaidi" id="heroImg">
+      <img src="images/talha1.png" alt="Talha Zaidi" id="heroImg">
     </div>
   </div>
 
@@ -330,137 +330,301 @@
 </div>
 
 <!-- ══════ RESEARCH ══════ -->
-<div class="wrap" id="research">
-  <div class="sec-hdr reveal"><span class="sec-num">03</span><h2 class="sec-title">Research &amp; Publications</h2><div class="sec-line"></div></div>
-
-  <div class="paper-list">
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb placeholder">
-        <div class="ph-box">
-          <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="24" rx="4" stroke="#2563EB" stroke-width="1.5"/><path d="M14 30l7-7 6 5 7-8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Image placeholder</span>
-        </div>
-      </div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-blue">CVsports @ CVPR 2026</span><span class="vtag v-green">Accepted</span></div>
-        <div class="pttl">GRAZE: Grounded Refinement and Motion-Aware Zero-Shot Event Recognition</div>
-        <p class="pdesc">Zero-shot sports event recognition framework combining grounded visual refinement with motion-aware features for fine-grained video understanding.</p>
-      </div>
-    </div>
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb placeholder">
-        <div class="ph-box">
-          <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="24" rx="4" stroke="#2563EB" stroke-width="1.5"/><path d="M14 30l7-7 6 5 7-8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Image placeholder</span>
-        </div>
-      </div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-gold">IJCAI 2026</span><span class="vtag v-purple">Submitted</span></div>
-        <div class="pttl">GRALP: Generative Representation for Action Refinement and Latent Planning in Offline RL</div>
-        <p class="pdesc">Latent-skill offline RL framework for contact-rich robotic manipulation. Improves long-horizon planning while preserving behavior support and low-level execution quality across D4RL, Adroit, and RoboSuite benchmarks.</p>
-      </div>
-    </div>
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb placeholder">
-        <div class="ph-box">
-          <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="24" rx="4" stroke="#2563EB" stroke-width="1.5"/><path d="M14 30l7-7 6 5 7-8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Image placeholder</span>
-        </div>
-      </div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-gold">IROS 2026</span><span class="vtag v-purple">Submitted</span></div>
-        <div class="pttl">CRISP: Context-Robust Inpainting for Long-Horizon Skill Planning under Partial Observability</div>
-        <p class="pdesc">Masked latent-skill inference for robust long-horizon planning under missing or degraded context. Focuses on partial observability in offline reinforcement learning and context-robust skill sequencing.</p>
-      </div>
-    </div>
-
-    <div class="paper-card reveal">
-		<div class="paper-thumb"><img src="images/SA3C.png" alt="SA3C low-thrust trajectory optimization"></div>
-		<div class="paper-body">
-		  <div class="vrow"><span class="vtag v-blue">IEEE Transaction on Aerospace and Electronic Systems 2025</span><span class="vtag v-gold">🛰 NASA Funded</span></div>
-		  <div class="pttl">Autonomous Planning of Low-Thrust Geocentric and Cislunar Spacecraft Trajectories Using Reinforcement Learning</div>
-		  <p class="pdesc">Developed the SA3C algorithm with an attention mechanism to improve sample efficiency and decision quality for low-thrust spacecraft trajectory optimization in geocentric and cislunar missions.</p>
-		  <div class="plinks"><a href="https://ieeexplore.ieee.org/document/11079476" target="_blank" class="pl">↗ Paper</a></div>
-		</div>
+<style>
+	#research{
+	  --research-thumb-width: 220px;
+	  --research-thumb-height: 190px;
+	  --research-gap: 22px;
+	}
+  
+	#research .paper-card{
+	  display:flex;
+	  align-items:stretch;
+	  gap:var(--research-gap);
+	}
+  
+	#research .paper-thumb{
+	  flex:0 0 var(--research-thumb-width);
+	  width:var(--research-thumb-width);
+	  min-width:var(--research-thumb-width);
+	  max-width:var(--research-thumb-width);
+	  height:var(--research-thumb-height);
+	  overflow:hidden;
+	}
+  
+	#research .paper-body{
+	  flex:1 1 0;
+	  min-width:0;
+	}
+  
+	#research .paper-thumb img{
+	  width:100%;
+	  height:100%;
+	  object-fit: var(--img-fit, cover);
+	  object-position: var(--img-pos, center center);
+	  display:block;
+	  transform: scale(var(--img-zoom, 1));
+	}
+  
+	#research .paper-thumb.dual{
+	  flex:0 0 var(--research-thumb-width);
+	  width:var(--research-thumb-width);
+	  min-width:var(--research-thumb-width);
+	  max-width:var(--research-thumb-width);
+	  height:var(--research-thumb-height);
+	  display:flex;
+	  flex-direction:column;
+	  overflow:hidden;
+	}
+  
+	#research .paper-thumb.dual img{
+	  width:100%;
+	  height:50%;
+	  object-fit: var(--img-fit, cover);
+	  object-position: var(--img-pos, center center);
+	  display:block;
+	  transform: scale(var(--img-zoom, 1));
+	}
+  </style>
+  
+  <div class="wrap" id="research">
+	  <div class="sec-hdr reveal">
+		<span class="sec-num">03</span>
+		<h2 class="sec-title">Research &amp; Publications</h2>
+		<div class="sec-line"></div>
 	  </div>
-
-
-
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb"><img src="images/APEC.png" alt="Smart grid resilience"></div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-blue">APEC 2026</span><span class="vtag v-green">Conference Paper</span></div>
-        <div class="pttl">A Resilient Neural Coordination Framework for Grid-Forming Inverter Networks Under Cyberattacks</div>
-        <p class="pdesc">Introduced a resilient neural coordination framework for grid-forming inverter networks that maintains stability and coordination under cyberattacks in smart-grid environments.</p>
-      </div>
-    </div>
-
-
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb"><img src="images/Microgrid.jpg" alt="Microgrid attack resilience"></div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-blue">IEEE Access 2025</span><span class="vtag v-green">⚡ DOE Funded</span></div>
-        <div class="pttl">Attack-Resilient Coordination of Grid-Forming Inverters Under Communication Failures and Malicious Conditions</div>
-        <p class="pdesc">Designed and evaluated resilient coordination methods for grid-forming inverters under communication disruptions and cyber-physical attacks, targeting secure and stable smart-grid operation.</p>
-        <div class="plinks"><a href="https://ieeexplore.ieee.org/abstract/document/10939154" target="_blank" class="pl">↗ Paper</a></div>
-      </div>
-    </div>
-
 	
-    <div class="paper-card reveal">
-      <div class="paper-thumb"><img src="images/Low thrust.JPG" alt="Low-thrust planning"></div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-blue">AIAA SCITECH 2024</span></div>
-        <div class="pttl">Machine Learning Assisted Low-Thrust Orbit-Raising: A Comparative Assessment of Sequential Algorithm and Deep RL</div>
-        <p class="pdesc">Integrated a sequential optimization algorithm with a neural high-level planner and benchmarked the resulting framework against deep RL approaches for orbit-raising and halo-orbit transfer missions.</p>
-        <div class="plinks"><a href="https://arc.aiaa.org/doi/abs/10.2514/6.2024-1669" target="_blank" class="pl">↗ Paper</a></div>
-      </div>
-    </div>
-
-	<div class="paper-card reveal">
-		<div class="paper-thumb placeholder">
-		  <div class="ph-box">
-			<svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="24" rx="4" stroke="#2563EB" stroke-width="1.5"/><path d="M14 30l7-7 6 5 7-8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-			<span>Image placeholder</span>
+	  <div class="paper-list">
+	
+		<!-- GRAZE -->
+		<div class="paper-card reveal">
+			<div class="paper-thumb">
+				<img src="images/GRAZE.png" alt="GRAZE" style="--img-fit:contain; --img-pos:center; --img-zoom: 1;">
+			  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">CVsports @ CVPR 2026</span>
+			  <span class="vtag v-green">Accepted</span>
+			</div>
+			<div class="pttl">GRAZE: Grounded Refinement and Motion-Aware Zero-Shot Event Recognition</div>
+			<p class="pdesc">Zero-shot sports event recognition framework combining grounded visual refinement with motion-aware features for fine-grained video understanding.</p>
+			<div class="plinks">
+			  <a href="#" class="pl" onclick="return false;">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
 		  </div>
 		</div>
-		<div class="paper-body">
-		  <div class="vrow"><span class="vtag v-blue">Springer Nature 2025</span><span class="vtag v-purple">Submitted</span></div>
-		  <div class="pttl">Improving Adversarial Robustness Through Adaptive Learning-Driven Multi-Teacher Knowledge Distillation</div>
-		  <p class="pdesc">Adaptive multi-teacher knowledge distillation framework aimed at improving adversarial robustness beyond standard single-teacher or conventional training approaches.</p>
+  
+		<!-- GRALP -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			  <img src="images/robo.gif" alt="GRALP" style="--img-zoom:1;">
+			</div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-gold">IJCAI 2026- AI and Robotics Track</span>
+			  <span class="vtag v-purple">Submitted</span>
+			</div>
+			<div class="pttl">GRALP: Generative Representation for Action Refinement and Latent Planning in Offline RL</div>
+			<p class="pdesc">Latent-skill offline RL framework for contact-rich robotic manipulation. Improves long-horizon planning while preserving behavior support and low-level execution quality across D4RL, Adroit, and RoboSuite benchmarks.</p>
+			<div class="plinks">
+			  <a href="#" class="pl" onclick="return false;">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
 		</div>
+	
+		<!-- CRISP -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			  <img src="images/pen.gif" alt="CRISP" style="--img-zoom:1;">
+			</div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-gold">IROS 2026- Main Track</span>
+			  <span class="vtag v-purple">Submitted</span>
+			</div>
+			<div class="pttl">CRISP: Context-Robust Inpainting for Long-Horizon Skill Planning under Partial Observability</div>
+			<p class="pdesc">Masked latent-skill inference for robust long-horizon planning under missing or degraded context. Focuses on partial observability in offline reinforcement learning and context-robust skill sequencing.</p>
+			<div class="plinks">
+			  <a href="#" class="pl" onclick="return false;">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- SA3C TAES -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/NRHO_SGTO.gif" alt="SA3C low-thrust trajectory optimization" style="--img-fit:contain; --img-pos:center; --img-zoom: 1.1;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">IEEE Transaction on Aerospace and Electronic Systems 2025</span>
+			  <span class="vtag v-gold">🛰 NASA Funded</span>
+			</div>
+			<div class="pttl">Autonomous Planning of Low-Thrust Geocentric and Cislunar Spacecraft Trajectories Using Reinforcement Learning</div>
+			<p class="pdesc">Developed the SA3C algorithm with an attention mechanism to improve sample efficiency and decision quality for low-thrust spacecraft trajectory optimization in geocentric and cislunar missions.</p>
+			<div class="plinks">
+			  <a href="https://ieeexplore.ieee.org/abstract/document/11002711" target="_blank" class="pl">↗ Paper</a>
+			  <a href="https://github.com/iscaas/NASA-AI-Trajectory-Optimization-2020-2024/tree/main/SA3C-2body+Cislunar" target="_blank" class="pl">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- CDRL IEEE Magazine AES 2025 -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/singleSAC.jpg" alt="Automated trajectory planning with cascaded DRL" style="--img-fit:contain; --img-pos:center center; --img-zoom: 1;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">IEEE Magazine on Aerospace and Electronic Systems 2025</span>
+			</div>
+			<div class="pttl">Automated Trajectory Planning: A Cascaded Deep Reinforcement Learning Approach for Low-Thrust Spacecraft Orbit-Raising</div>
+			<p class="pdesc">Developed a novel Cascaded Deep Reinforcement Learning (CDRL) approach to optimize low-thrust spacecraft trajectory planning, significantly improving time-efficient orbit transfers in complex multi-body environments for transfers to GEO and NRHO.</p>
+			<div class="plinks">
+			  <a href="https://ieeexplore.ieee.org/abstract/document/10947520" target="_blank" class="pl">↗ Paper</a>
+			  <a href="https://github.com/iscaas/NASA-AI-Trajectory-Optimization-2020-2024/tree/main/CDRL-SAC-2body%2BCislunar" target="_blank" class="pl">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- APEC 2026 -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/APEC.gif" alt="Smart grid resilience" style="--img-fit:contain; --img-pos:center center; --img-zoom: 1;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">APEC 2026</span>
+			  <span class="vtag v-green">Conference Paper</span>
+			</div>   
+			<div class="pttl">An Integrated AI-Based Approach for Virtual-Impedance Scheduling and Cyber-Attack Mitigation in Smart-Grid Environments</div>
+			<p class="pdesc">Introduced a resilient neural coordination framework for grid-forming inverter networks that maintains stability and coordination under cyberattacks in smart-grid environments.</p>
+			<div class="plinks">
+			  <a href="#" class="pl" onclick="return false;">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- AIAA SCITECH 2024 -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/NASA.JPG" alt="Low-thrust orbit-raising" style="--img-fit:contain; --img-pos:center center; --img-zoom: 1.2;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">AIAA SCITECH 2024</span>
+			</div>
+			<div class="pttl">Machine Learning Assisted Low-Thrust Orbit-Raising: A Comparative Assessment of Sequential Algorithm and Deep RL</div>
+			<p class="pdesc">Developed a machine-learning-assisted method for optimizing low-thrust orbit-raising trajectories, integrating a sequential algorithm with a neural network-based high-level planner and benchmarking it against deep reinforcement learning approaches for geostationary and halo-orbit missions.</p>
+			<div class="plinks">
+			  <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2024-1669" target="_blank" class="pl">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- IEEE Access 2023 -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/GTO-GEO.gif" alt="Cascaded deep RL low-thrust orbit transfer" style="--img-zoom:1.2;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">IEEE Access 2023</span>
+			</div>
+			<div class="pttl">Cascaded Deep Reinforcement Learning-Based Multi-Revolution Low-Thrust Spacecraft Orbit-Transfer</div>
+			<p class="pdesc">Developed a cascaded DRL model for optimizing long-duration, low-thrust spacecraft transfers from GTO to GEO. Guided by a gradient-aided reward function, the method significantly reduces transfer time and improves spacecraft autonomy in complex multi-revolution transfers.</p>
+			<div class="plinks">
+			  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10207710" target="_blank" class="pl">↗ Paper</a>
+			  <a href="https://github.com/talhazaidi13/Cascaded-Deep-Reinforcement-Learning-Based-Multi-Revolution-Low-Thrust-Spacecraft-Orbit-Transfer" target="_blank" class="pl">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- Springer Nature 2025 -->
+		<div class="paper-card reveal">
+			<div class="paper-thumb">
+				<img src="images/KDist.png" alt="Knowledge Distillation" style="--img-fit:contain; --img-pos:center center; --img-zoom: 1;">
+			  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">Springer Nature 2025</span>
+			  <span class="vtag v-purple">Submitted</span>
+			</div>
+			<div class="pttl">Improving Adversarial Robustness Through Adaptive Learning-Driven Multi-Teacher Knowledge Distillation</div>
+			<p class="pdesc">Adaptive multi-teacher knowledge distillation framework aimed at improving adversarial robustness beyond standard single-teacher or conventional training approaches.</p>
+			<div class="plinks">
+			  <a href="https://arxiv.org/pdf/2507.20996" target="_blank" class="pl">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- BMVC 2021 -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/bmvc5.png" alt="Mode-guided feature augmentation for domain generalization" style="--img-fit:contain; height: 80%; --img-pos:center upper; --img-zoom: 1;">
+			<img src="images/bmvc2.JPG" alt="Mode-guided feature augmentation for domain generalization" style="--img-fit:contain; height: 20%; --img-pos:center lower; --img-zoom: 1;">
+ 
+		</div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">BMVC 2021</span>
+			</div>
+			<div class="pttl">Mode-Guided Feature Augmentation for Domain Generalization</div>
+			<p class="pdesc">Proposed a simple and efficient domain generalization approach that augments source domains by exploring dominant modes of variation in the feature space, improving generalization to unseen domains across standard DG benchmarks.</p>
+			<div class="plinks">
+			  <a href="https://www.bmva-archive.org.uk/bmvc/2021/assets/papers/0757.pdf" target="_blank" class="pl">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- LANL -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb">
+			<img src="images/LANL.JPG" alt="Earthquake LANL" style="--img-fit:contain; --img-pos:center center; --img-zoom: 1;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-blue">IEEE SIU 2020</span>
+			</div>
+			<div class="pttl">Learned vs. Hand-Crafted Features for Deep Learning Based Aperiodic Laboratory Earthquake Time-Prediction</div>
+			<p class="pdesc">Developed and compared machine learning models for laboratory earthquake prediction using LANL data, where CNN-LSTM models improved time-to-failure prediction over hand-crafted approaches.</p>
+			<div class="plinks">
+			  <a href="https://ieeexplore.ieee.org/abstract/document/9302474" target="_blank" class="pl">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
+		<!-- Journal of Neuroscience Methods -->
+		<div class="paper-card reveal">
+		  <div class="paper-thumb dual">
+			<img src="images/MTRX.gif" alt="Neuroprosthetics BMI" style="height:60%;">
+			<img src="images/MTRX1.JPG" alt="Neuroprosthetics setup" style="height:40%;">
+		  </div>
+		  <div class="paper-body">
+			<div class="vrow">
+			  <span class="vtag v-purple">Journal of Neuroscience Methods</span>
+			  <span class="vtag v-gold">🔬 TUBITAK Funded</span>
+			</div>
+			<div class="pttl">A Behavioral Paradigm for Cortical Control of a Robotic Actuator by Freely Moving Rats in a One-Dimensional Two-Target Reaching Task</div>
+			<p class="pdesc">Demonstrated trajectory-based neuroprosthetic control in rodents using primary motor cortex activity, providing a cost-effective platform for studying brain-machine interfaces and neural control.</p>
+			<div class="plinks">
+			  <a href="https://www.sciencedirect.com/science/article/pii/S0165027022000826" target="_blank" class="pl">↗ Paper</a>
+			  <a href="#" class="pl" onclick="return false;">↗ Code</a>
+			</div>
+		  </div>
+		</div>
+	
 	  </div>
+	</div>
 
-    <div class="paper-card reveal">
-      <div class="paper-thumb"><img src="images/LANL.JPG" alt="Earthquake LANL"></div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-blue">IEEE SIU 2020</span></div>
-        <div class="pttl">Learned vs. Hand-Crafted Features for Deep Learning Based Aperiodic Laboratory Earthquake Time-Prediction</div>
-        <p class="pdesc">Developed and compared machine learning models for laboratory earthquake prediction using LANL data, where CNN-LSTM models improved time-to-failure prediction over hand-crafted approaches.</p>
-        <div class="plinks"><a href="https://ieeexplore.ieee.org/abstract/document/9302474" target="_blank" class="pl">↗ Paper</a></div>
-      </div>
-    </div>
-
-    <div class="paper-card reveal">
-      <div class="paper-thumb dual">
-        <img src="images/MTRX.gif" alt="Neuroprosthetics BMI" style="height:50%;">
-        <img src="images/MTRX1.JPG" alt="Neuroprosthetics setup" style="height:50%;">
-      </div>
-      <div class="paper-body">
-        <div class="vrow"><span class="vtag v-purple">Journal of Neuroscience Methods</span><span class="vtag v-gold">🔬 TUBITAK Funded</span></div>
-        <div class="pttl">A Behavioral Paradigm for Cortical Control of a Robotic Actuator by Freely Moving Rats in a One-Dimensional Two-Target Reaching Task</div>
-        <p class="pdesc">Demonstrated trajectory-based neuroprosthetic control in rodents using primary motor cortex activity, providing a cost-effective platform for studying brain-machine interfaces and neural control.</p>
-        <div class="plinks"><a href="https://www.sciencedirect.com/science/article/pii/S0165027022000826" target="_blank" class="pl">↗ Paper</a></div>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 <!-- ══════ EXPERIENCE ══════ -->
 <div class="wrap" id="experience">
@@ -588,7 +752,7 @@
 /* ─── HERO IMAGE FALLBACK ─── */
 document.getElementById('heroImg').onerror=function(){
   const w=document.getElementById('photoWrap');
-  w.innerHTML='<div class="photo-placeholder"><svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="9" stroke="#3D9CF0" stroke-width="1.5"/><path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="#3D9CF0" stroke-width="1.5" stroke-linecap="round"/></svg><span style="font-size:0.65rem">talha1.jpg</span></div>';
+  w.innerHTML='<div class="photo-placeholder"><svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="9" stroke="#3D9CF0" stroke-width="1.5"/><path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="#3D9CF0" stroke-width="1.5" stroke-linecap="round"/></svg><span style="font-size:0.65rem">talha1.png</span></div>';
 };
 
 
