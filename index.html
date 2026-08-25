@@ -2077,6 +2077,293 @@
       }
     }
 
+
+
+    /* Recent highlights */
+    .news-section{
+      padding:1.1rem 0 0;
+    }
+
+    .news-head{
+      display:flex;
+      align-items:baseline;
+      gap:1rem;
+      margin-bottom:.8rem;
+    }
+
+    .news-kicker{
+      color:#2779a7;
+      font:500 .56rem/1.2 var(--font-mono);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .news-head h2{
+      margin:0;
+      color:#302923;
+      font-family:var(--font-display);
+      font-size:1.2rem;
+      font-weight:600;
+      letter-spacing:-.025em;
+    }
+
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:.7rem;
+    }
+
+    .news-item{
+      min-width:0;
+      padding:1rem 1rem 1.05rem;
+      border:1px solid rgba(54,47,41,.09);
+      border-radius:14px;
+      background:rgba(255,255,255,.64);
+    }
+
+    .news-date{
+      margin-bottom:.45rem;
+      color:#8a8179;
+      font:500 .54rem/1.2 var(--font-mono);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .news-item h3{
+      margin:0 0 .38rem;
+      color:#39312b;
+      font-family:var(--font-display);
+      font-size:.9rem;
+      font-weight:600;
+      line-height:1.3;
+      letter-spacing:-.015em;
+    }
+
+    .news-item p{
+      margin:0;
+      color:#746c65;
+      font-size:.7rem;
+      line-height:1.55;
+    }
+
+    .news-item a{
+      display:inline-block;
+      margin-top:.55rem;
+      color:#2779a7;
+      text-decoration:none;
+      font:500 .55rem/1.2 var(--font-mono);
+    }
+
+    .news-item a:hover{
+      text-decoration:underline;
+    }
+
+    #work{
+      padding-top:3.9rem;
+    }
+
+    @media(max-width:980px){
+      .news-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media(max-width:580px){
+      .news-head{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:.3rem;
+      }
+
+      .news-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+
+
+    /* ============================================================
+       V7 — Recent Highlights (58%) + Interactive Robot (42%)
+       ============================================================ */
+
+    .home-update-card{
+      display:grid;
+      grid-template-columns:minmax(0,58fr) minmax(320px,42fr);
+      margin-top:1rem;
+      overflow:hidden;
+      border:1px solid rgba(54,47,41,.10);
+      border-radius:20px;
+      background:#fffdf9;
+      box-shadow:0 10px 28px rgba(45,36,29,.045);
+    }
+
+    .home-news{
+      padding:1.25rem 1.35rem;
+      border-right:1px solid rgba(54,47,41,.09);
+      background:rgba(255,255,255,.48);
+    }
+
+    .home-update-kicker{
+      margin-bottom:.65rem;
+      color:#2779a7;
+      font:500 .56rem/1.2 var(--font-mono);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .home-news-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .home-news-list li{
+      display:grid;
+      grid-template-columns:72px minmax(0,1fr);
+      gap:.75rem;
+      align-items:start;
+      padding:.68rem 0;
+      border-top:1px solid rgba(54,47,41,.07);
+      color:#5e5751;
+      font-size:.78rem;
+      line-height:1.5;
+    }
+
+    .home-news-list li:first-child{
+      border-top:0;
+      padding-top:.12rem;
+    }
+
+    .home-news-date{
+      padding-top:.05rem;
+      color:#918880;
+      font:500 .54rem/1.4 var(--font-mono);
+      white-space:nowrap;
+    }
+
+    .home-news-list strong{
+      color:#37302a;
+      font-weight:600;
+    }
+
+    .home-robot{
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      background:#fbfaf7;
+    }
+
+    .home-robot-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:.8rem;
+      padding:.85rem .95rem .58rem;
+    }
+
+    .home-robot-head .home-update-kicker{
+      margin-bottom:.25rem;
+    }
+
+    .home-robot h2{
+      margin:0;
+      color:#302923;
+      font-family:var(--font-display);
+      font-size:1rem;
+      font-weight:600;
+      line-height:1.2;
+      letter-spacing:-.02em;
+    }
+
+    .home-robot-readout{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      color:#90877f;
+      font:400 .52rem/1.35 var(--font-mono);
+    }
+
+    .home-robot-readout strong{
+      color:#4c453f;
+      font-weight:500;
+      white-space:nowrap;
+    }
+
+    .home-robot-stage{
+      min-width:0;
+      flex:1;
+      background:
+        linear-gradient(rgba(65,71,75,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(65,71,75,.025) 1px,transparent 1px),
+        #fbfaf7;
+      background-size:26px 26px;
+      border-top:1px solid rgba(54,47,41,.07);
+      border-bottom:1px solid rgba(54,47,41,.07);
+    }
+
+    .home-robot #robotCanvas{
+      display:block;
+      width:100%;
+      height:185px;
+      cursor:crosshair;
+      background:transparent;
+    }
+
+    .home-robot-note{
+      margin:0;
+      padding:.55rem .95rem .65rem;
+      color:#8b837b;
+      font-size:.62rem;
+      line-height:1.4;
+    }
+
+    #work{
+      padding-top:3.8rem;
+    }
+
+    @media(max-width:900px){
+      .home-update-card{
+        grid-template-columns:1fr;
+      }
+
+      .home-news{
+        border-right:0;
+        border-bottom:1px solid rgba(54,47,41,.09);
+      }
+
+      .home-robot #robotCanvas{
+        height:215px;
+      }
+    }
+
+    @media(max-width:520px){
+      .home-update-card{
+        border-radius:16px;
+      }
+
+      .home-news{
+        padding:1rem;
+      }
+
+      .home-news-list li{
+        grid-template-columns:1fr;
+        gap:.2rem;
+        padding:.6rem 0;
+      }
+
+      .home-robot-head{
+        padding:.8rem;
+      }
+
+      .home-robot-note{
+        padding:.55rem .8rem .65rem;
+      }
+
+      .home-robot #robotCanvas{
+        height:185px;
+      }
+    }
+
 </style>
 </head>
 
@@ -2147,25 +2434,57 @@
           </div>
         </div>
 
-        <div class="robot-strip reveal" aria-label="Interactive two-link robot arm demonstration">
-          <div class="robot-strip-copy">
-            <div class="robot-strip-kicker">Interactive Demo</div>
-            <h2>Robot Arm Control</h2>
-            <p>Move your cursor across the workspace to change the target. The two-link arm follows it in real time using inverse kinematics.</p>
-            <div class="robot-strip-readout">
-              <span>Target</span>
-              <strong id="targetReadout">x: 0.61 · y: 0.43</strong>
-            </div>
+        <div class="home-update-card reveal">
+          <div class="home-news" aria-label="Recent highlights">
+            <div class="home-update-kicker">Recent Highlights</div>
+
+            <ul class="home-news-list">
+              <li>
+                <span class="home-news-date">Jun 2026</span>
+                <span><strong>CRISP</strong> accepted to <strong>IROS 2026 Conference.</strong></span>
+              </li>
+              <li>
+                <span class="home-news-date">May 2026</span>
+                <span><strong>GRALP</strong> accepted to <strong>IJCAI IJCAI-ECAI 2026 AI and Robotics Track.</strong></span>
+              </li>
+              <li>
+                <span class="home-news-date">Jun 2026</span>
+                <span>Received the <strong>Excellence in Research Award</strong></span>
+              </li>
+              <li>
+                <span class="home-news-date">Jun 2026</span>
+                <span>Selected for the <strong>IEEE Telerobotics Summer School</strong> at RIT</span>
+              </li>
+			   <li>
+                <span class="home-news-date">April 2026</span>
+                <span>Received the <strong>Outstanding Research Award</strong></span>
+              </li>
+            </ul>
           </div>
 
-          <div class="robot-strip-stage">
-            <canvas id="robotCanvas"></canvas>
+          <div class="home-robot" aria-label="Interactive two-link robot arm demonstration">
+            <div class="home-robot-head">
+              <div>
+                <div class="home-update-kicker">Interactive Demo</div>
+                <h2>Robot Arm Control</h2>
+              </div>
+              <div class="home-robot-readout">
+                <span>Target</span>
+                <strong id="targetReadout">x: 0.61 · y: 0.43</strong>
+              </div>
+            </div>
+
+            <div class="home-robot-stage">
+              <canvas id="robotCanvas"></canvas>
+            </div>
+
+            <p class="home-robot-note">Move the cursor to change the target.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="block" id="work">
+<section class="block" id="work">
       <div class="wrap">
         <div class="section-head reveal">
           <div class="section-kicker">01 / Selected work</div>
